@@ -5,12 +5,16 @@
  */
 package principal;
 
+import java.util.Optional;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  *
@@ -42,6 +46,26 @@ public class Principal  extends Application{
         palco.show();        
 
         rootLayout.setCenter(layout);
+        
+        palco.setOnCloseRequest((WindowEvent arg0) -> {
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Sistema Batch informa");
+            alert.setHeaderText("Diálogo de Confirmação");
+            alert.setContentText("Deseja realmente sair?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.get() == ButtonType.OK) {
+                            
+                System.exit(0);
+
+            } else {
+
+                arg0.consume();
+
+            }
+        }); 
                            
     }
                 

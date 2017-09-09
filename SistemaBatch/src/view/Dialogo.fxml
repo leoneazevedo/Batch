@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.8310344827586207" orientation="VERTICAL" prefHeight="292.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.DialogoController">
+   <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="182.0" prefWidth="578.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="custIDEdit" prefHeight="25.0" prefWidth="181.0" promptText="entre 1500 e 2700" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin></TextField>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="226.0" text="ID" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="226.0" text="CPF ou CNPJ" textAlignment="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="226.0" text="Nome" textAlignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="226.0" text="Ativo?" textAlignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="226.0" text="Saldo" textAlignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="custCPFEdit" promptText="Digite seu CPF ou CNPJ" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="custNomeEdit" promptText="Digite seu nome" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="custActiveEdit" promptText="Sim ou Não " GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="custValueEdit" promptText="Digite seu saldo " GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin></TextField>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.0" minWidth="10.0" prefWidth="194.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="237.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="431.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnCadastrar" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="499.0" layoutY="38.0" mnemonicParsing="false" onAction="#newCustomer" style="-fx-background-color: #0A562A;" text="Cadastrar" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="btnFinalizar" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="396.0" layoutY="39.0" mnemonicParsing="false" onAction="#okCustomer" style="-fx-background-color: #0A562A;" text="Finalizar" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Bold" size="14.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </items>
+</SplitPane>
